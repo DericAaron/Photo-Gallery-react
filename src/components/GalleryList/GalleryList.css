@@ -1,0 +1,37 @@
+.imageArea {
+    position: relative;
+    width: 100%;
+}
+
+.imageArea img {
+    width: 100%;
+    height: auto;
+    box-shadow: 3px 3px 5px 2px rgba(0, 0, 0, 0.363);
+
+}
+
+.imageArea .overlay {
+    position: absolute;
+    background-color: #53D8FB;
+    opacity: 0;
+    top: 0;
+    bottom: 0;
+    transition: 1s ease;
+    height: 99%;
+    width: 100%;
+}
+
+.imageArea .desc {
+    color: white;
+}
+
+.imageArea:hover .overlay {
+    opacity: .80;
+}
+
+.display-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    padding-right: 10px;
+  }

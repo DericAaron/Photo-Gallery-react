@@ -1,0 +1,15 @@
+.App-header {
+    background-color: #0D5C63;
+    height: 80px;
+    width: 100%;
+    padding: 20px;
+    box-shadow: 3px 3px 5px 2px rgba(0, 0, 0, 0.363);
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQRMsAX-5ye2D4C88r_pCTOJGLSnY8iEVjMu88Osmb1WOoFc5R');
+    background-blend-mode: color-burn;
+    background-size: fill;
+}
+  
+  .App-title {
+    font-size: 2em;
+    color: #FFFFFA;
+  }
