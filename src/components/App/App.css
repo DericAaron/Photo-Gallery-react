@@ -25,6 +25,7 @@
 .form {
   grid-row: 2 / span 3;
   background-color: #44A1A0;
+  box-shadow: 3px 3px 5px 2px rgba(0, 0, 0, 0.363);
 }
 .body {
   grid-column: 2 / span 3;
