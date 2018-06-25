@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import './App.css';
 import axios from 'axios';
 
-
-
 import Header from '../Header/Header';
 import GalleryList from '../GalleryList/GalleryList';
 import SubmitForm from '../SubmitForm/SubmitForm';
@@ -30,6 +28,7 @@ class App extends Component {
         this.getGallery();
       }).catch( (error) => {
         console.log('Error in delete');
+        alert('Delete request failed');
       }); 
   }
 
@@ -42,12 +41,10 @@ class App extends Component {
         this.setState({ gallery: [...response.data]})
       }).catch( (error) => {
         console.log('Error in Get Gallery');
+        alert('Unable to get photos from server.');
+        
       });
   } // end getGallery
-
-  postPhoto = () => {
-
-  }
 
   putLike = (id) => (event) => {
     console.log(id);
@@ -58,12 +55,9 @@ class App extends Component {
         this.getGallery();
       }).catch( (error) => {
         console.log('Error in putLike');
+        alert('Unable to like Photo!');
       }); 
   } // end putLike
-
-  tabChange = (value) => (event) => {
-    this.setState({value});
-  }
 
   render() {
     return (
