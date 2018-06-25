@@ -13,7 +13,7 @@
 .imageArea .overlay {
     position: absolute;
     background-color: #53D8FB;
-    opacity: 0;
+    opacity: .90;
     top: 0;
     bottom: 0;
     transition: 1s ease;
@@ -23,10 +23,6 @@
 
 .imageArea .desc {
     color: white;
-}
-
-.imageArea:hover .overlay {
-    opacity: .80;
 }
 
 .display-container {
