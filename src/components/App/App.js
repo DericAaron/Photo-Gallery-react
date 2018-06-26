@@ -6,6 +6,23 @@ import Header from '../Header/Header';
 import GalleryList from '../GalleryList/GalleryList';
 import SubmitForm from '../SubmitForm/SubmitForm';
 
+import { withStyles } from '@material-ui/core/styles';
+import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+import blue from '@material-ui/core/colors/blue';
+
+const styles = {
+  root: {
+    backgroundColor: '#FFFFFA',
+  },
+};
+
+// https://material-ui.com/customization/themes/
+const theme = createMuiTheme({
+  palette: {
+    primary: blue,
+  },
+});
+
 class App extends Component {
 
   constructor(){
@@ -58,10 +75,11 @@ class App extends Component {
         alert('Unable to like Photo!');
       }); 
   } // end putLike
-
+  // 
   render() {
     return (
-      <div className="App grid-container">
+      <MuiThemeProvider theme={theme}>
+      <div className={this.props.classes.root} className="App grid-container" >
         <div className="head">
         <Header />
         </div>
@@ -73,10 +91,10 @@ class App extends Component {
         <div className="body">
         <GalleryList gallery={this.state.gallery} putLike={this.putLike} deletePhoto={this.deletePhoto}/>
         </div>
-        
       </div>
+      </MuiThemeProvider>
     );
   }
 }
 
-export default App;
+export default withStyles(styles)(App);

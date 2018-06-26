@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 
 class GalleryItem extends Component {
-    constructor(){
-        super();
+    constructor(props){
+        super(props);
+        //set the state for description
         this.state = {showDesc: false}
     }
 

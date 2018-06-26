@@ -3,6 +3,8 @@ import './GalleryList.css';
 import GalleryItem from '../GalleryItem/GalleryItem';
 import GalleryButton from '../GalleryButton/GalleryButton';
 
+
+
 class GalleryList extends Component {
 
   render() {
